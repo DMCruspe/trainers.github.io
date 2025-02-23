@@ -89,6 +89,7 @@
     font-size: 30px;
     color: var(--main-color);
     z-index: 1;
+    animation: ani 2s forwards;
 }
 
 .rname{
@@ -102,6 +103,52 @@
     direction: rtl;
 }
 
+.rpicture, .mpicture{
+    display: none;
+    width: 952px;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    transition: opacity 5s ease, transform 5s ease;
+    opacity: 0;
+}
+
+.rpicture img, .mpicture img{
+    width: 300px;
+    height: 300px;
+}
+
+.rside:hover .rpicture, .mside:hover .mpicture{
+    display: flex;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.rdescript, .mdescript{
+    z-index: 1;
+    font-family: var(--secondary-font);
+    font-size: var(--main-font-size);
+    text-align: center;
+    margin-top: 320px;
+    padding: 0 20px;
+    color: var(--main-color);
+}
+
+.rdescript p, .mdescript p{
+    opacity: 0;
+}
+
+.rside:hover .rdescript p, .mside:hover .mdescript p{
+    display: flex;
+    transition: opacity 0.5s, transform 0.5s ease; 
+    opacity: 1;
+
+}
 /*footer*/
 
 .version{
@@ -116,4 +163,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/*animation*/ 
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
