@@ -45,13 +45,44 @@
 }
 
 .logo{
-    display: block;
-    position: absolute;
+    display: flex;
     z-index: 1;
-    align-items: center;
-    height:  10px;
-    width: 10px;
+    animation: ani 2s forwards;
 }
+
+.rlogo{ 
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 845px;
+
+}
+
+.rside:hover .rlogo{
+    filter: drop-shadow(0 0 10px rgb(4, 0, 255));
+}
+
+.mside:hover .mlogo{
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+.rside:hover .rlogo img,
+.mside:hover .mlogo img{
+    opacity: 0;
+}
+
+.mlogo{
+    position: absolute;
+    display: flex;
+    top: 30px;
+    right: 865px;
+}
+
+.logo img{
+    width: 100px;
+    height: 200px;
+}
+
 .main{
     display: flex;
     justify-content: space-between;
