@@ -107,6 +107,14 @@
     filter: blur(7px);
 }
 
+.rside:hover::before{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 1)), url(img/republicside.webp);
+}
+
+.mside:hover::before{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 1)), url(img/merceneryside.jpg);
+}
+
 .rside::before{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1)), url(img/republicside.webp);
 }
@@ -121,17 +129,32 @@
     color: var(--main-color);
     z-index: 1;
     animation: ani 2s forwards;
+    width: 100%;
 }
 
 .rname{
-    top:20px;
+    top: 20px;
     left: 20px;
+}
+
+.rname h3{
+    font-family: var(--secondary-font);
+    font-size: var(--footer-font-size);
+    position: absolute;
+    top: 90px;
 }
 
 .mname{
     top:20px;
     right: 20px;
     direction: rtl;
+}
+
+.mname h3{
+    font-family: var(--secondary-font);
+    font-size: var(--footer-font-size);
+    position: absolute;
+    top: 90px;
 }
 
 .rpicture, .mpicture{
@@ -152,6 +175,7 @@
 .rpicture img, .mpicture img{
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 .rside:hover .rpicture, .mside:hover .mpicture{
